@@ -1,0 +1,24 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:arisian_bookshelf"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:arisian_planks"
+    },
+    "count": 4
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    },
+    {
+      "basePredicate": {
+        "tag": "minecraft:book"
+      },
+      "count": 3
+    }
+  ]
+}

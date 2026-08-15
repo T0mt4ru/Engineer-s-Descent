@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:wailing_planks"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:wailing_slab"
+    },
+    "count": 2
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

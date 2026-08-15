@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:stripped_arisian_wood"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:arisian_planks"
+    },
+    "count": 6
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

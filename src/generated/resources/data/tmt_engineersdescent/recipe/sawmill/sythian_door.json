@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:sythian_door"
+  },
+  "result": {
+    "item": "netherdescent:sythian_planks"
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

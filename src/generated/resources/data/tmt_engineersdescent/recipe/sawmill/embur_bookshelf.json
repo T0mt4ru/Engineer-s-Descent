@@ -1,0 +1,24 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:embur_bookshelf"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:embur_planks"
+    },
+    "count": 4
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    },
+    {
+      "basePredicate": {
+        "tag": "minecraft:book"
+      },
+      "count": 3
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:arisian_log"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:arisian_planks"
+    },
+    "count": 6
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ],
+  "stripped": {
+    "item": "netherdescent:stripped_arisian_log"
+  },
+  "strippingSecondaries": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

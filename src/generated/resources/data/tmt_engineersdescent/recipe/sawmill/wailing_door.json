@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:wailing_door"
+  },
+  "result": {
+    "item": "netherdescent:wailing_planks"
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

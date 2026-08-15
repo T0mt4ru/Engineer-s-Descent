@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:embur_door"
+  },
+  "result": {
+    "item": "netherdescent:embur_planks"
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

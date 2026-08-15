@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:stripped_wailing_hyphae"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:wailing_planks"
+    },
+    "count": 6
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

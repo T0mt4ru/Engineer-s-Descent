@@ -1,0 +1,18 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:sythian_planks"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:sythian_slab"
+    },
+    "count": 2
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

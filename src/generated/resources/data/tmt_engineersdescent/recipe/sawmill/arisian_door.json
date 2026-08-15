@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:arisian_door"
+  },
+  "result": {
+    "item": "netherdescent:arisian_planks"
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:wailing_bookshelf"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:wailing_planks"
+    },
+    "count": 4
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    },
+    {
+      "basePredicate": {
+        "tag": "minecraft:book"
+      },
+      "count": 3
+    }
+  ]
+}

@@ -55,7 +55,7 @@ public class TmtModData {
     public record TreePedia(String treeName, TreeType treeType) {
         public static final TreePedia WAILING   = new TreePedia("wailing", TreeType.STEM);
         public static final TreePedia EMBUR     = new TreePedia("embur", TreeType.PEDU);
-        public static final TreePedia ARISIAN   = new TreePedia("arisan", TreeType.LOG);
+        public static final TreePedia ARISIAN   = new TreePedia("arisian", TreeType.LOG);
         public static final TreePedia SYTHIAN   = new TreePedia("sythian", TreeType.STEM);
 
 

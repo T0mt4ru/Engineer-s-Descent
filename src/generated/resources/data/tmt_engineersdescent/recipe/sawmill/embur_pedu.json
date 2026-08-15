@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:sawmill",
+  "energy": 1600,
+  "input": {
+    "item": "netherdescent:embur_pedu"
+  },
+  "result": {
+    "basePredicate": {
+      "item": "netherdescent:embur_planks"
+    },
+    "count": 6
+  },
+  "secondaryOutputs": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ],
+  "stripped": {
+    "item": "netherdescent:stripped_embur_pedu"
+  },
+  "strippingSecondaries": [
+    {
+      "tag": "c:dusts/wood"
+    }
+  ]
+}
