@@ -1,6 +1,7 @@
-// 1.21.1	2026-08-17T23:39:23.6481396	Tags for minecraft:item mod id tmt_engineersdescent
-fc526ccdcd5ebcb5c2ba159789701248bbf236a8 data/tmt_engineersdescent/tags/item/compat/arisian_soil.json
-dd8391db30010435038797c120b69e3f0e83bf65 data/tmt_engineersdescent/tags/item/compat/crimson_soil.json
-b8a96118dd3d1d088e67ace2e3c7ed7d5bfd7c4e data/tmt_engineersdescent/tags/item/compat/embur_soil.json
-ffec0749a38e625038d28299d87d552967bf8483 data/tmt_engineersdescent/tags/item/compat/nether_moss_replacable.json
-3428a3b97045ea525e176a3d011364ec626d2bd9 data/tmt_engineersdescent/tags/item/compat/sythian_soil.json
+// 1.21.1	2026-08-18T01:34:51.517015	Tags for minecraft:item mod id tmt_engineersdescent
+6d8625c1bdd7052af6079508848c397569365976 data/tmt_engineersdescent/tags/item/compat/arisian_soil.json
+90f469cb6c5adab542958053f9b2361f3a48faae data/tmt_engineersdescent/tags/item/compat/crimson_soil.json
+c2defbc6b6b048db517a115db36c17c76ebd1420 data/tmt_engineersdescent/tags/item/compat/embur_soil.json
+c39594a79e43f932d385459d360c0c898595b85d data/tmt_engineersdescent/tags/item/compat/nether_moss_replacable.json
+b5eee317d4a5eb5efabbd72c399bc93315f16cc0 data/tmt_engineersdescent/tags/item/compat/sythian_soil.json
+f3bb10da1603d97970c942a10ac1837fb990a8fa data/tmt_engineersdescent/tags/item/compat/wailing_soil.json

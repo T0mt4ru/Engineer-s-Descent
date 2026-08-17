@@ -1,16 +1,6 @@
 {
   "values": [
-    {
-      "id": "minecraft:crimson_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:crimson_blackstone_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:wailing_nylium",
-      "required": false
-    }
+    "minecraft:crimson_nylium",
+    "netherdescent:crimson_blackstone_nylium"
   ]
 }

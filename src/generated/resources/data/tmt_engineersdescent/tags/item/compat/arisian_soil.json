@@ -1,8 +1,5 @@
 {
   "values": [
-    {
-      "id": "netherdescent:arisian_moss_block",
-      "required": false
-    }
+    "netherdescent:arisian_moss_block"
   ]
 }

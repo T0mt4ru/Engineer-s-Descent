@@ -1,12 +1,6 @@
 {
   "values": [
-    {
-      "id": "netherdescent:sythian_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:sythian_soil",
-      "required": false
-    }
+    "netherdescent:sythian_nylium",
+    "netherdescent:sythian_soil"
   ]
 }

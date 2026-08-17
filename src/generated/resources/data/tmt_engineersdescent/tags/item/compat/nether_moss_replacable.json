@@ -1,52 +1,15 @@
 {
   "values": [
-    {
-      "id": "minecraft:netherrack",
-      "required": false
-    },
-    {
-      "id": "minecraft:basalt",
-      "required": false
-    },
-    {
-      "id": "minecraft:blackstone",
-      "required": false
-    },
-    {
-      "id": "minecraft:crimson_nylium",
-      "required": false
-    },
-    {
-      "id": "minecraft:warped_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:blue_netherrack",
-      "required": false
-    },
-    {
-      "id": "netherdescent:wailing_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:embur_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:sythian_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:crimson_blackstone_nylium",
-      "required": false
-    },
-    {
-      "id": "netherdescent:sythian_soil",
-      "required": false
-    },
-    {
-      "id": "netherdescent:embur_nylium",
-      "required": false
-    }
+    "minecraft:netherrack",
+    "minecraft:basalt",
+    "minecraft:blackstone",
+    "minecraft:crimson_nylium",
+    "minecraft:warped_nylium",
+    "netherdescent:blue_netherrack",
+    "netherdescent:wailing_nylium",
+    "netherdescent:embur_nylium",
+    "netherdescent:sythian_nylium",
+    "netherdescent:crimson_blackstone_nylium",
+    "netherdescent:sythian_soil"
   ]
 }
