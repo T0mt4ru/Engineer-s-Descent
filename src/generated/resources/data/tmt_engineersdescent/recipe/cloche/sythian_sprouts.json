@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:sythian_sprouts"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:sythian_sprouts"
+  },
+  "results": [
+    {
+      "id": "netherdescent:sythian_sprouts"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/sythian_soil"
+  },
+  "time": 1600
+}

@@ -7,11 +7,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
 
 import java.util.List;
 
@@ -19,8 +18,7 @@ public class TmtModData {
 
     public enum ClocheRenderType {
         GENERIC,
-        CROP,
-        STEM
+        CROP
     }
 
     public enum TreeType {
@@ -30,14 +28,12 @@ public class TmtModData {
     }
 
     public enum PlantCategory {
-        FUNGI,
-        FLOWER,
-        VEGETABLE,
-        FRUIT,
-        CACTUS,
-        REED,
-        PUMPKIN,
-        SWAMP
+        WAILING,
+        EMBUR,
+        ARISIAN,
+        SYTHIAN,
+        MOSS,
+        CRIMSON
     }
 
     public record ModPedia(String modid, String modName) {
@@ -45,7 +41,7 @@ public class TmtModData {
         public static final ModPedia FD     = new ModPedia("farmersdelight", "Farmer's Delight");
         public static final ModPedia IE     = new ModPedia("immersiveengineering", "Immersive Engineering");
         public static final ModPedia MC     = new ModPedia("minecraft", "Minecraft");
-        public static final ModPedia ND = new ModPedia("netherdescent", "Nether Descent");
+        public static final ModPedia ND     = new ModPedia("netherdescent", "Nether Descent");
 
         public ResourceLocation id(String path) {
             return ResourceLocation.fromNamespaceAndPath(this.modid, path);
@@ -127,17 +123,67 @@ public class TmtModData {
         }
     }
 
-    public record HerbaPedia (String herbType, int yield,  ClocheRenderType renderType, PlantCategory category) {
+    public record SoilPedia (String soilName) {
+        public static final SoilPedia WAILING           = new SoilPedia("compat/wailing_soil");
+        public static final SoilPedia EMBUR             = new SoilPedia("compat/embur_soil");
+        public static final SoilPedia SYTHIAN           = new SoilPedia("compat/sythian_soil");
+        public static final SoilPedia ARISIAN           = new SoilPedia("compat/arisian_soil");
+        public static final SoilPedia MOSS              = new SoilPedia("compat/nether_moss_replacable");
+        public static final SoilPedia CRIMSON           = new SoilPedia("compat/crimson_soil");
+
+
+        public TagKey<Item> getTag() {
+            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, this.soilName));
+        }
+    }
+
+    public record HerbaPedia (String herbName, int yield, ClocheRenderType renderType, PlantCategory plantCategory) {
+        public static final HerbaPedia WAILING_GRASS    = new HerbaPedia("wailing_grass", 1,
+                ClocheRenderType.GENERIC, PlantCategory.WAILING);
+        public static final HerbaPedia EMBUR_SPROUTS    = new HerbaPedia("embur_sprouts", 1,
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
+        public static final HerbaPedia EMBUR_ROOTS      = new HerbaPedia("embur_roots", 1,
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
+        public static final HerbaPedia TALL_EMBUR_ROOTS = new HerbaPedia("tall_embur_roots", 1,
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
+        public static final HerbaPedia EMBUR_MOSS       = new HerbaPedia("embur_moss_block", 1,
+                ClocheRenderType.GENERIC, PlantCategory.MOSS);
+        public static final HerbaPedia TALL_ARISIAN_SPROUTS = new HerbaPedia("tall_arisian_sprouts", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia ARISIAN_SPROUTS = new HerbaPedia("arisian_sprouts", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia ARISIAN_MOSS = new HerbaPedia("arisian_moss_block", 1,
+                ClocheRenderType.GENERIC, PlantCategory.MOSS);
+        public static final HerbaPedia ARISIAN_BLOSSOM = new HerbaPedia("arisian_blossom", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia ARISIAN_BRANCH = new HerbaPedia("arisian_branch", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia TALL_ARISIAN_DANDELIONS = new HerbaPedia("tall_arisian_dandelions", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia ARISIAN_DANDELIONS = new HerbaPedia("arisian_dandelions", 1,
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+        public static final HerbaPedia SYTHIAN_SPROUTS = new HerbaPedia("sythian_sprouts", 1,
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+        public static final HerbaPedia SYTHIAN_ROOTS = new HerbaPedia("sythian_roots", 1,
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+        public static final HerbaPedia SYTHIAN_STALK = new HerbaPedia("sythian_stalk", 3,
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+        public static final HerbaPedia TALL_CRIMSON_ROOTS = new HerbaPedia("tall_crimson_roots", 1,
+                ClocheRenderType.GENERIC, PlantCategory.CRIMSON);
+        public static final HerbaPedia CRIMSON_BERRIES = new HerbaPedia("crimson_berries", 2,
+                ClocheRenderType.CROP, PlantCategory.CRIMSON);
+        public static final HerbaPedia FUNGAL_BULBS =  new HerbaPedia("fungal_bulbs", 1,
+                ClocheRenderType.GENERIC, PlantCategory.MOSS);
 
         public static final List<HerbaPedia> HERBAPEDIA = List.of(
+                WAILING_GRASS, EMBUR_SPROUTS, EMBUR_ROOTS, TALL_EMBUR_ROOTS, EMBUR_MOSS, TALL_ARISIAN_SPROUTS,
+                ARISIAN_SPROUTS, ARISIAN_MOSS, ARISIAN_BLOSSOM, ARISIAN_BRANCH, TALL_ARISIAN_DANDELIONS,
+                ARISIAN_DANDELIONS, SYTHIAN_SPROUTS, SYTHIAN_ROOTS, SYTHIAN_STALK, TALL_CRIMSON_ROOTS, CRIMSON_BERRIES,
+                FUNGAL_BULBS
         );
 
         public ResourceLocation seedItem() {
-            if (this.herbType.equals("white_puffball_cap")) {
-                return ModPedia.ND.id("white_puffball_spores");
-            } else if (this.herbType.equals("pale_pumpkin")) {
-                return ModPedia.ND.id("pale_pumpkin_seeds");
-            } else return ModPedia.ND.id(this.herbType);
+            return ModPedia.ND.id(this.herbName);
         }
 
         public Holder<Item> getItemHolder(ResourceLocation id) {
@@ -150,45 +196,18 @@ public class TmtModData {
         }
 
         public ResourceLocation cropRenderBlock() {
-            if (this.herbType.equals("oddion_bulb")) {
-                return ModPedia.ND.id(this.herbType.replace("_bulb", "_crop"));
-            } else if (this.herbType.equals("blueberries")) {
-                return ModPedia.ND.id("blueberry_bush");
-            } else if (this.herbType.equals("white_puffball_cap")) {
-                return ModPedia.ND.id(this.herbType.replace("_cap", ""));
-            } else if (this.category.equals(PlantCategory.REED)) {
-                return ModPedia.ND.id(herbType.replace("_shoot", ""));
-            } else return ModPedia.ND.id(this.herbType);
+            if (herbName.equals("crimson_berries")) {
+                return ModPedia.ND.id("crimson_berry_bush");
+            }
+            return ModPedia.ND.id(this.herbName);
         }
 
         public Block getCropRenderBlock() {
             return BuiltInRegistries.BLOCK.get(cropRenderBlock());
         }
 
-        public ResourceLocation stemRenderBlock() {
-            if (this.herbType.equals("pale_pumpkin")) {
-                return ModPedia.ND.id("pale_pumpkin_stem");
-            }
-            throw new IllegalStateException("This crop has no stem!");
-        }
-
-        public Block getStemRenderBlock() {
-            return BuiltInRegistries.BLOCK.get(stemRenderBlock());
-        }
-
-        public ResourceLocation attachedStemRenderBlock() {
-            if (this.herbType.equals("pale_pumpkin")) {
-                return ModPedia.ND.id("attached_pale_pumpkin_stem");
-            }
-            throw new IllegalStateException("This crop has no attached stem!");
-        }
-
-        public Block getAttachedStemRenderBlock() {
-            return BuiltInRegistries.BLOCK.get(attachedStemRenderBlock());
-        }
-
         public ResourceLocation produceItem() {
-            return ModPedia.ND.id(this.herbType);
+            return ModPedia.ND.id(this.herbName);
         }
 
         public ClocheRenderFunction getClocheRenderFunction() {
@@ -197,8 +216,6 @@ public class TmtModData {
                     new ClocheRenderFunctions.RenderFunctionCrop(getCropRenderBlock());
                 case GENERIC ->
                     new ClocheRenderFunctions.RenderFunctionGeneric(getCropRenderBlock());
-                case STEM ->
-                    new ClocheRenderFunctions.RenderFunctionStem(getCropRenderBlock(), getStemRenderBlock(), getAttachedStemRenderBlock());
             };
         }
 
@@ -207,33 +224,16 @@ public class TmtModData {
         }
 
         public Ingredient getSoil() {
-            return switch (this.category) {
-                case FUNGI ->
-                        Ingredient.of(Items.MYCELIUM);
-                case FLOWER ->
-                        Ingredient.of(Items.DIRT);
-                case VEGETABLE ->
-                        Ingredient.of(Items.DIRT);
-                case FRUIT ->
-                        Ingredient.of(Items.DIRT);
-                case CACTUS ->
-                        Ingredient.of(Tags.Items.SANDS);
-                case PUMPKIN ->
-                        Ingredient.of(Items.DIRT);
-                case REED ->
-                        Ingredient.of(Items.DIRT);
-                case SWAMP ->
-                        Ingredient.of(Items.WATER_BUCKET);
+            return switch (this.plantCategory) {
+                case WAILING -> Ingredient.of(SoilPedia.WAILING.getTag());
+                case EMBUR ->  Ingredient.of(SoilPedia.EMBUR.getTag());
+                case ARISIAN -> Ingredient.of(SoilPedia.ARISIAN.getTag());
+                case SYTHIAN -> Ingredient.of(SoilPedia.SYTHIAN.getTag());
+                case MOSS -> Ingredient.of(SoilPedia.MOSS.getTag());
+                case CRIMSON -> Ingredient.of(SoilPedia.CRIMSON.getTag());
             };
         }
 
-        public boolean worksOnRichSoil() {
-            return this.category == PlantCategory.FLOWER
-                    || this.category == PlantCategory.VEGETABLE
-                    || this.category == PlantCategory.PUMPKIN
-                    || this.category == PlantCategory.REED
-                    || this.category == PlantCategory.FRUIT;
-        }
     }
 
     public record SandPedia (String sandType) {

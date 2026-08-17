@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:crimson_berries"
+  },
+  "render": {
+    "type": "immersiveengineering:crop",
+    "block": "netherdescent:crimson_berry_bush"
+  },
+  "results": [
+    {
+      "count": 2,
+      "id": "netherdescent:crimson_berries"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/crimson_soil"
+  },
+  "time": 1600
+}

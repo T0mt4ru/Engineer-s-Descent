@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:sythian_roots"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:sythian_roots"
+  },
+  "results": [
+    {
+      "id": "netherdescent:sythian_roots"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/sythian_soil"
+  },
+  "time": 1600
+}

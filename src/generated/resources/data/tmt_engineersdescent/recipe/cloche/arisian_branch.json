@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:arisian_branch"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:arisian_branch"
+  },
+  "results": [
+    {
+      "id": "netherdescent:arisian_branch"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/arisian_soil"
+  },
+  "time": 1600
+}

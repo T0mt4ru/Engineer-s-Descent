@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "netherdescent:embur_nylium",
+      "required": false
+    },
+    {
+      "id": "netherdescent:embur_moss_block",
+      "required": false
+    }
+  ]
+}

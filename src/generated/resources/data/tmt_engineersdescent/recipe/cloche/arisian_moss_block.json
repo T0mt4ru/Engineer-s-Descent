@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:arisian_moss_block"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:arisian_moss_block"
+  },
+  "results": [
+    {
+      "id": "netherdescent:arisian_moss_block"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/nether_moss_replacable"
+  },
+  "time": 1600
+}

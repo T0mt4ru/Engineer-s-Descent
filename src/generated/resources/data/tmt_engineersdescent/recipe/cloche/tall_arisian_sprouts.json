@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:tall_arisian_sprouts"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:tall_arisian_sprouts"
+  },
+  "results": [
+    {
+      "id": "netherdescent:tall_arisian_sprouts"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/arisian_soil"
+  },
+  "time": 1600
+}

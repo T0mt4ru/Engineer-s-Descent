@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:arisian_dandelions"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:arisian_dandelions"
+  },
+  "results": [
+    {
+      "id": "netherdescent:arisian_dandelions"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/arisian_soil"
+  },
+  "time": 1600
+}

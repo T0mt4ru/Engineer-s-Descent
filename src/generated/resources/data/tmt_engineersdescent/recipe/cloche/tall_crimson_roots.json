@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:tall_crimson_roots"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:tall_crimson_roots"
+  },
+  "results": [
+    {
+      "id": "netherdescent:tall_crimson_roots"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/crimson_soil"
+  },
+  "time": 1600
+}

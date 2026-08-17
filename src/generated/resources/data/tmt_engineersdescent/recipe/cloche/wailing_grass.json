@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:wailing_grass"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:wailing_grass"
+  },
+  "results": [
+    {
+      "id": "netherdescent:wailing_grass"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/wailing_soil"
+  },
+  "time": 1600
+}

@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:tall_embur_roots"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:tall_embur_roots"
+  },
+  "results": [
+    {
+      "id": "netherdescent:tall_embur_roots"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/embur_soil"
+  },
+  "time": 1600
+}

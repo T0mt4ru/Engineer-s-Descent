@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:fungal_bulbs"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:fungal_bulbs"
+  },
+  "results": [
+    {
+      "id": "netherdescent:fungal_bulbs"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/nether_moss_replacable"
+  },
+  "time": 1600
+}
