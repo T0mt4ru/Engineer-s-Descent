@@ -44,6 +44,7 @@ public class TmtModData {
         public static final ModPedia IE     = new ModPedia("immersiveengineering", "Immersive Engineering");
         public static final ModPedia MC     = new ModPedia("minecraft", "Minecraft");
         public static final ModPedia ND     = new ModPedia("netherdescent", "Nether Descent");
+        public static final ModPedia ED     = new ModPedia("tmt_engineersdescent", "Engineer's Descent");
 
         public ResourceLocation id(String path) {
             return ResourceLocation.fromNamespaceAndPath(this.modid, path);
@@ -188,10 +189,6 @@ public class TmtModData {
                 FUNGAL_BULBS
         );
 
-        public ResourceLocation seedItem() {
-            return ModPedia.ND.id(this.herbName);
-        }
-
         public Holder<Item> getItemHolder(ResourceLocation id) {
             ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, id);
             return BuiltInRegistries.ITEM.getHolderOrThrow(key);
@@ -199,6 +196,10 @@ public class TmtModData {
 
         public Ingredient getIngredient(ResourceLocation id) {
             return Ingredient.of(getItemHolder(id).value());
+        }
+
+        public ResourceLocation seedItem() {
+            return ModPedia.ND.id(this.herbName);
         }
 
         public ResourceLocation cropRenderBlock() {
@@ -227,9 +228,9 @@ public class TmtModData {
         public ClocheRenderFunction getClocheRenderFunction() {
             return switch (this.renderType) {
                 case CROP ->
-                    new ClocheRenderFunctions.RenderFunctionCrop(getCropRenderBlock());
+                        new ClocheRenderFunctions.RenderFunctionCrop(getCropRenderBlock());
                 case GENERIC ->
-                    new ClocheRenderFunctions.RenderFunctionGeneric(getCropRenderBlock());
+                        new ClocheRenderFunctions.RenderFunctionGeneric(getCropRenderBlock());
             };
         }
 
@@ -249,44 +250,12 @@ public class TmtModData {
         }
     }
 
-    public record SandPedia (String sandType) {
-        public static final SandPedia BLACK = new SandPedia("black");
-        public static final SandPedia WHITE = new SandPedia("white");
-        public static final SandPedia BLUE = new SandPedia("blue");
-        public static final SandPedia PURPLE = new SandPedia("purple");
-        public static final SandPedia PINK = new SandPedia("pink");
-        public static final SandPedia WINDSWEPT = new SandPedia("windswept");
+    public record OrePedia ( String oreName) {
+        public static final OrePedia PENDORITE = new OrePedia("pendorite");
 
-        public static final List<SandPedia> SANDPEDIA = List.of(
-                BLACK, WHITE, BLUE, PURPLE, PINK, WINDSWEPT
+        public static final List<OrePedia> OREPEDIA = List.of(
+                PENDORITE
         );
-
-        public ResourceLocation sand() {
-            return ModPedia.ND.id(this.sandType + "_sand");
-        }
-
-        public ResourceLocation sandstone() {
-            return ModPedia.ND.id(this.sandType + "_sandstone");
-        }
-
-        public ResourceLocation chiseledSandstone() {
-            return ModPedia.ND.id("chiseled_" + this.sandType + "_sandstone");
-        }
-
-        public ResourceLocation smoothSandstone() {
-            return ModPedia.ND.id("smooth_" + this.sandType + "_sandstone");
-        }
-
-        public ResourceLocation cutSandstone() {
-            return ModPedia.ND.id("cut_"+ this.sandType +"_sandstone");
-        }
-
-        public ResourceLocation getDye() {
-            if (this.sandType.equals("windswept")) {
-                return ModPedia.MC.id("wind_charge");
-            }
-            return ModPedia.MC.id(this.sandType + "_dye");
-        }
 
         public Holder<Item> getItemHolder(ResourceLocation id) {
             ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, id);
@@ -295,6 +264,34 @@ public class TmtModData {
 
         public Ingredient getIngredient(ResourceLocation id) {
             return Ingredient.of(getItemHolder(id).value());
+        }
+
+        public TagKey<Item> getTag(ResourceLocation id) {
+            return TagKey.create(Registries.ITEM, id);
+        }
+
+        public ResourceLocation oreBlock() {
+            return ModPedia.C.id("ores/" + this.oreName);
+        }
+
+        public ResourceLocation raw() {
+            return ModPedia.ND.id( "raw_" + this.oreName);
+        }
+
+        public ResourceLocation rawOreBlock() {
+            return ModPedia.C.id("storage_blocks/" + this.oreName);
+        }
+
+        public ResourceLocation ingot() {
+            return ModPedia.C.id("ingots/" + this.oreName);
+        }
+
+        public ResourceLocation nugget() {
+            return ModPedia.C.id("nuggets/" + this.oreName);
+        }
+
+        public ResourceLocation dust() {
+            return ModPedia.C.id("dusts/" + this.oreName);
         }
     }
 }

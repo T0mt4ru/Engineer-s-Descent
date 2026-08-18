@@ -1,5 +1,3 @@
 {
-  "itemGroup.tmt_engineersdescent": "Example Mod Tab",
-  "block.tmt_engineersdescent.example_block": "Example Block",
-  "item.tmt_engineersdescent.example_item": "Example Item"
+  "item.tmt_engineersdescent.metal_dust_pendorite": "Pendorite Grit"
 }

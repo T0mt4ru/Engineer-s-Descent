@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tmt_engineersdescent:item/metal_dust_pendorite"
+  }
+}

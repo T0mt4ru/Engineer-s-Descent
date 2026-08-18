@@ -28,6 +28,6 @@ public class TmtModDataGenerators {
         generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new TmtModItemTagsProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
         //generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        //generator.addProvider(event.includeClient(), new TmtModItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new TmtModItemModelProvider(packOutput, existingFileHelper));
     }
 }

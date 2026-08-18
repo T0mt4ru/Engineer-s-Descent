@@ -13,6 +13,12 @@
   "results": [
     {
       "id": "netherdescent:embur_moss_block"
+    },
+    {
+      "chance": 0.5,
+      "output": {
+        "id": "netherdescent:embur_cave_moss"
+      }
     }
   ],
   "soil": {

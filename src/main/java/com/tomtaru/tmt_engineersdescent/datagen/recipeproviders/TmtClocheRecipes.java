@@ -51,7 +51,6 @@ public class TmtClocheRecipes {
             );
         }
 
-
         ClocheRecipe recipe = new ClocheRecipe(
                 outputs,
                 seedItem,

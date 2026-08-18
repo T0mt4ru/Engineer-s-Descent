@@ -1,6 +1,7 @@
 package com.tomtaru.tmt_engineersdescent;
 
 import com.mojang.logging.LogUtils;
+import com.tomtaru.tmt_engineersdescent.registry.TmtModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.api.distmarker.Dist;
@@ -33,6 +34,7 @@ public class Tmt_engineersdescent {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         NeoForge.EVENT_BUS.register(this);
+        TmtModItems.register();
 
     }
 

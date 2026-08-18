@@ -21,7 +21,7 @@ public class TmtModRecipeProvider extends RecipeProvider {
         //MixerRecipes.build(output);
         //BottlingMachineRecipes.build(output);
         TmtClocheRecipes.build(output);
-        //TmtCrusherRecipes.build(output);
+        TmtCrusherRecipes.build(output);
         //MetalPressRecipes.build(output);
         TmtSawmillRecipes.build(output);
         //SqueezerRecipes.build(output);

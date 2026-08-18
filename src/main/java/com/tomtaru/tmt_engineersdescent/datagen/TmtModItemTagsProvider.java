@@ -7,14 +7,12 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagEntry;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class TmtModItemTagsProvider extends ItemTagsProvider {
@@ -29,46 +27,61 @@ public class TmtModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         TagKey<Item> synthianSoilCompat = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/sythian_soil"));
+                TmtModData.ModPedia.ED.id("compat/sythian_soil"));
 
         TagKey<Item> emburSoilCompat = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/embur_soil"));
+                TmtModData.ModPedia.ED.id("compat/embur_soil"));
 
         TagKey<Item> crimsonSoilCompat = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/crimson_soil"));
+                TmtModData.ModPedia.ED.id("compat/crimson_soil"));
 
         TagKey<Item> arisianSoilCompat = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/arisian_soil"));
+                TmtModData.ModPedia.ED.id("compat/arisian_soil"));
 
         TagKey<Item> wailingSoilCompat = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/wailing_soil"));
+                TmtModData.ModPedia.ED.id( "compat/wailing_soil"));
 
         TagKey<Item> netherMossReplacable = TagKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "compat/nether_moss_replacable"));
+                TmtModData.ModPedia.ED.id("compat/nether_moss_replacable"));
 
-        tag(synthianSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "sythian_nylium")));
-        tag(synthianSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "sythian_soil")));
+        TagKey<Item> commonPendoriteOreBlock = TagKey.create(Registries.ITEM,
+                TmtModData.ModPedia.C.id("ores/pendorite"));
 
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "netherrack")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "basalt")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "blackstone")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "crimson_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "warped_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "blue_netherrack")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "wailing_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "embur_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "sythian_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "crimson_blackstone_nylium")));
-        tag(netherMossReplacable).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "sythian_soil")));
+        TagKey<Item> commonPendoriteDust = TagKey.create(Registries.ITEM,
+                TmtModData.ModPedia.C.id("dusts/pendorite"));
 
-        tag(emburSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "embur_nylium")));
-        tag(emburSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "embur_moss_block")));
+        TagKey<Item> commonRawPendorite = TagKey.create(Registries.ITEM,
+                TmtModData.ModPedia.C.id("raw_pendorite"));
 
-        tag(crimsonSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.MC.modid(), "crimson_nylium")));
-        tag(crimsonSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "crimson_blackstone_nylium")));
+        tag(synthianSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("sythian_nylium")));
+        tag(synthianSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("sythian_soil")));
 
-        tag(arisianSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "arisian_moss_block")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.MC.id("netherrack")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.MC.id("basalt")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.MC.id("blackstone")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.MC.id("crimson_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.MC.id("warped_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("blue_netherrack")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("wailing_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("embur_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("sythian_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("crimson_blackstone_nylium")));
+        tag(netherMossReplacable).add(TagEntry.element(TmtModData.ModPedia.ND.id("sythian_soil")));
 
-        tag(wailingSoilCompat).add(TagEntry.element(ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.ND.modid(), "wailing_nylium")));
+        tag(emburSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("embur_nylium")));
+        tag(emburSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("embur_moss_block")));
+
+        tag(crimsonSoilCompat).add(TagEntry.element(TmtModData.ModPedia.MC.id("crimson_nylium")));
+        tag(crimsonSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("crimson_blackstone_nylium")));
+
+        tag(arisianSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("arisian_moss_block")));
+
+        tag(wailingSoilCompat).add(TagEntry.element(TmtModData.ModPedia.ND.id("wailing_nylium")));
+
+        tag(commonPendoriteOreBlock).add(TagEntry.element(TmtModData.ModPedia.ND.id("pendorite_ore")));
+
+        tag(commonPendoriteDust).add(TagEntry.element(TmtModData.ModPedia.ED.id("metal_dust_pendorite")));
+
+        tag(commonRawPendorite).add(TagEntry.element(TmtModData.ModPedia.ND.id("raw_pendorite")));
     }
 }

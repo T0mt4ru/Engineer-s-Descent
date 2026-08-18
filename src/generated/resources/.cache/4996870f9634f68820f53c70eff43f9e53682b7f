@@ -1,4 +1,7 @@
-// 1.21.1	2026-08-18T01:34:51.517015	Tags for minecraft:item mod id tmt_engineersdescent
+// 1.21.1	2026-08-19T01:25:48.8034994	Tags for minecraft:item mod id tmt_engineersdescent
+4f6b1a3f26db8dca8caa7b90067991dea2bd9c07 data/c/tags/item/dusts/pendorite.json
+6b55ffd2c5fa594c21673796c7b41d51ec76367e data/c/tags/item/ores/pendorite.json
+7c11eeac99255b38cb5c818764cd2b2d20664eec data/c/tags/item/raw_pendorite.json
 6d8625c1bdd7052af6079508848c397569365976 data/tmt_engineersdescent/tags/item/compat/arisian_soil.json
 90f469cb6c5adab542958053f9b2361f3a48faae data/tmt_engineersdescent/tags/item/compat/crimson_soil.json
 c2defbc6b6b048db517a115db36c17c76ebd1420 data/tmt_engineersdescent/tags/item/compat/embur_soil.json
