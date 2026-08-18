@@ -36,6 +36,8 @@ public class TmtModData {
         CRIMSON
     }
 
+    private static final String NOSECONDARIES = null;
+
     public record ModPedia(String modid, String modName) {
         public static final ModPedia C      = new ModPedia("c", "Common");
         public static final ModPedia FD     = new ModPedia("farmersdelight", "Farmer's Delight");
@@ -137,46 +139,50 @@ public class TmtModData {
         }
     }
 
-    public record HerbaPedia (String herbName, int yield, ClocheRenderType renderType, PlantCategory plantCategory) {
+    public record HerbaPedia (String herbName, int yield, ClocheRenderType renderType, PlantCategory plantCategory, String secondaries) {
         public static final HerbaPedia WAILING_GRASS    = new HerbaPedia("wailing_grass", 1,
-                ClocheRenderType.GENERIC, PlantCategory.WAILING);
+                ClocheRenderType.GENERIC, PlantCategory.WAILING, NOSECONDARIES);
+        public static final HerbaPedia WAILING_BULB_BLOSSOM = new HerbaPedia("wailing_bulb_blossom", 1,
+                ClocheRenderType.GENERIC, PlantCategory.WAILING, NOSECONDARIES);
+        public static final HerbaPedia WAILING_FUNGUS = new HerbaPedia("wailing_fungus", 1,
+                ClocheRenderType.GENERIC, PlantCategory.WAILING, "wailing_gills");
         public static final HerbaPedia EMBUR_SPROUTS    = new HerbaPedia("embur_sprouts", 1,
-                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR, NOSECONDARIES);
         public static final HerbaPedia EMBUR_ROOTS      = new HerbaPedia("embur_roots", 1,
-                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR, NOSECONDARIES);
         public static final HerbaPedia TALL_EMBUR_ROOTS = new HerbaPedia("tall_embur_roots", 1,
-                ClocheRenderType.GENERIC, PlantCategory.EMBUR);
-        public static final HerbaPedia EMBUR_MOSS       = new HerbaPedia("embur_moss_block", 1,
-                ClocheRenderType.GENERIC, PlantCategory.MOSS);
+                ClocheRenderType.GENERIC, PlantCategory.EMBUR, NOSECONDARIES);
+        public static final HerbaPedia EMBUR_MOSS_BLOCK       = new HerbaPedia("embur_moss_block", 1,
+                ClocheRenderType.GENERIC, PlantCategory.MOSS, "embur_cave_moss");
         public static final HerbaPedia TALL_ARISIAN_SPROUTS = new HerbaPedia("tall_arisian_sprouts", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia ARISIAN_SPROUTS = new HerbaPedia("arisian_sprouts", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia ARISIAN_MOSS = new HerbaPedia("arisian_moss_block", 1,
-                ClocheRenderType.GENERIC, PlantCategory.MOSS);
+                ClocheRenderType.GENERIC, PlantCategory.MOSS, NOSECONDARIES);
         public static final HerbaPedia ARISIAN_BLOSSOM = new HerbaPedia("arisian_blossom", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia ARISIAN_BRANCH = new HerbaPedia("arisian_branch", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia TALL_ARISIAN_DANDELIONS = new HerbaPedia("tall_arisian_dandelions", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia ARISIAN_DANDELIONS = new HerbaPedia("arisian_dandelions", 1,
-                ClocheRenderType.GENERIC, PlantCategory.ARISIAN);
+                ClocheRenderType.GENERIC, PlantCategory.ARISIAN, NOSECONDARIES);
         public static final HerbaPedia SYTHIAN_SPROUTS = new HerbaPedia("sythian_sprouts", 1,
-                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN, NOSECONDARIES);
         public static final HerbaPedia SYTHIAN_ROOTS = new HerbaPedia("sythian_roots", 1,
-                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN, NOSECONDARIES);
         public static final HerbaPedia SYTHIAN_STALK = new HerbaPedia("sythian_stalk", 3,
-                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN);
+                ClocheRenderType.GENERIC, PlantCategory.SYTHIAN, NOSECONDARIES);
         public static final HerbaPedia TALL_CRIMSON_ROOTS = new HerbaPedia("tall_crimson_roots", 1,
-                ClocheRenderType.GENERIC, PlantCategory.CRIMSON);
+                ClocheRenderType.GENERIC, PlantCategory.CRIMSON, NOSECONDARIES);
         public static final HerbaPedia CRIMSON_BERRIES = new HerbaPedia("crimson_berries", 2,
-                ClocheRenderType.CROP, PlantCategory.CRIMSON);
+                ClocheRenderType.CROP, PlantCategory.CRIMSON, NOSECONDARIES);
         public static final HerbaPedia FUNGAL_BULBS =  new HerbaPedia("fungal_bulbs", 1,
-                ClocheRenderType.GENERIC, PlantCategory.MOSS);
+                ClocheRenderType.GENERIC, PlantCategory.MOSS, NOSECONDARIES);
 
         public static final List<HerbaPedia> HERBAPEDIA = List.of(
-                WAILING_GRASS, EMBUR_SPROUTS, EMBUR_ROOTS, TALL_EMBUR_ROOTS, EMBUR_MOSS, TALL_ARISIAN_SPROUTS,
+                WAILING_GRASS, WAILING_FUNGUS, WAILING_BULB_BLOSSOM, EMBUR_SPROUTS, EMBUR_ROOTS, TALL_EMBUR_ROOTS, EMBUR_MOSS_BLOCK, TALL_ARISIAN_SPROUTS,
                 ARISIAN_SPROUTS, ARISIAN_MOSS, ARISIAN_BLOSSOM, ARISIAN_BRANCH, TALL_ARISIAN_DANDELIONS,
                 ARISIAN_DANDELIONS, SYTHIAN_SPROUTS, SYTHIAN_ROOTS, SYTHIAN_STALK, TALL_CRIMSON_ROOTS, CRIMSON_BERRIES,
                 FUNGAL_BULBS
@@ -210,6 +216,14 @@ public class TmtModData {
             return ModPedia.ND.id(this.herbName);
         }
 
+        public ResourceLocation secondaryItem() {
+            if (this.secondaries != null) {
+                return ModPedia.ND.id(this.secondaries);
+            } else {
+                return null;
+            }
+        }
+
         public ClocheRenderFunction getClocheRenderFunction() {
             return switch (this.renderType) {
                 case CROP ->
@@ -233,7 +247,6 @@ public class TmtModData {
                 case CRIMSON -> Ingredient.of(SoilPedia.CRIMSON.getTag());
             };
         }
-
     }
 
     public record SandPedia (String sandType) {

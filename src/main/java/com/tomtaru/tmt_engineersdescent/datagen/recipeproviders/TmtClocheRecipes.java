@@ -33,13 +33,24 @@ public class TmtClocheRecipes {
 
 
 
-    private static void generateClocheRecipe(RecipeOutput clocheOutput, Ingredient seedItem, ResourceLocation cropOutput, int cropYield,
-                                             Ingredient soilItem, FluidIngredient fluidIngredient, int time,
-                                             ClocheRenderFunction clocheRenderFunction, String recipeName) {
+    private static void generateClocheRecipe(
+            RecipeOutput clocheOutput, Ingredient seedItem, ResourceLocation cropOutput,int cropYield,
+            ResourceLocation cropSecondaries, Ingredient soilItem, FluidIngredient fluidIngredient, int time,
+            ClocheRenderFunction clocheRenderFunction, String recipeName) {
 
-        List<StackWithChance> outputs = List.of(
-                new StackWithChance(new TagOutput(BuiltInRegistries.ITEM.get(cropOutput), cropYield), chanceGuaranteed)
+        List<StackWithChance> outputs;
+
+        if (cropSecondaries != null) {
+        outputs = List.of(
+                new StackWithChance(new TagOutput(BuiltInRegistries.ITEM.get(cropOutput), cropYield), chanceGuaranteed),
+                new StackWithChance(new TagOutput(BuiltInRegistries.ITEM.get(cropSecondaries), 1), chanceMedium)
         );
+        } else {
+            outputs = List.of(
+                    new StackWithChance(new TagOutput(BuiltInRegistries.ITEM.get(cropOutput), cropYield), chanceGuaranteed)
+            );
+        }
+
 
         ClocheRecipe recipe = new ClocheRecipe(
                 outputs,
@@ -65,6 +76,7 @@ public class TmtClocheRecipes {
                     herbType.getIngredient(herbType.seedItem()),
                     herbType.produceItem(),
                     herbType.getYield(),
+                    herbType.secondaryItem(),
                     herbType.getSoil(),
                     fluidLava,
                     timeStandard,

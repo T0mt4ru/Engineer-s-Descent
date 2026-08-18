@@ -1,0 +1,22 @@
+{
+  "type": "immersiveengineering:cloche",
+  "fluid": {
+    "tag": "c:lava"
+  },
+  "input": {
+    "item": "netherdescent:wailing_bulb_blossom"
+  },
+  "render": {
+    "type": "immersiveengineering:generic",
+    "block": "netherdescent:wailing_bulb_blossom"
+  },
+  "results": [
+    {
+      "id": "netherdescent:wailing_bulb_blossom"
+    }
+  ],
+  "soil": {
+    "tag": "tmt_engineersdescent:compat/wailing_soil"
+  },
+  "time": 1600
+}
