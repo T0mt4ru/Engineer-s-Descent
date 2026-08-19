@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "ingredient": {
+    "item": "tmt_engineersdescent:metal_dust_pendorite"
+  },
+  "result": {
+    "count": 1,
+    "id": "netherdescent:pendorite_ingot"
+  }
+}

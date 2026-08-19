@@ -16,7 +16,7 @@ public class TmtModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(RecipeOutput output) {
-        //TmtVanillaRecipes.build(output);
+        TmtVanillaRecipes.build(output);
         //FermenterRecipes.build(output);
         //MixerRecipes.build(output);
         //BottlingMachineRecipes.build(output);
@@ -29,5 +29,6 @@ public class TmtModRecipeProvider extends RecipeProvider {
         //ThermoelectricRecipes.build(output);
         //RefineryRecipes.build(output);
         //TmtCokeovenRecipes.build(output);
+        TmtArFurnaceRecipes.build(output);
     }
 }

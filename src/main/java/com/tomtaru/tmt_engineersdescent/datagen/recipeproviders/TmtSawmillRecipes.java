@@ -18,6 +18,32 @@ import java.util.List;
 
 public class TmtSawmillRecipes {
 
+    /**
+     *
+     * @param sawingOutput
+     * @param input
+     * @param energy
+     * @param strippedOutput
+     * @param secondaryStrippedOutputs
+     * @param output
+     * @param secondaryOutputs
+     * @param recipeName
+     */
+
+    private static void generateSawmillRecipe(RecipeOutput sawingOutput, Ingredient input, int energy, TagOutput strippedOutput, TagOutputList secondaryStrippedOutputs, TagOutput output, TagOutputList secondaryOutputs, String recipeName) {
+        SawmillRecipe recipe = new SawmillRecipe(
+                output,
+                strippedOutput,
+                input,
+                energy,
+                secondaryStrippedOutputs,
+                secondaryOutputs
+        );
+
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "sawmill/" + recipeName);
+        sawingOutput.accept(id, recipe, null);
+    }
+
     public static void build(RecipeOutput output) {
         var energyStandard = 1600;
         var dustTag = new TagOutputList(new TagOutput(TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TmtModData.ModPedia.C.modid(), "dusts/wood"))));
@@ -108,19 +134,5 @@ public class TmtSawmillRecipes {
             }
         }
 
-    }
-
-    private static void generateSawmillRecipe(RecipeOutput sawingOutput, Ingredient input, int energy, TagOutput strippedOutput, TagOutputList secondaryStrippedOutputs, TagOutput output, TagOutputList secondaryOutputs, String recipeName) {
-        SawmillRecipe recipe = new SawmillRecipe(
-                output,
-                strippedOutput,
-                input,
-                energy,
-                secondaryStrippedOutputs,
-                secondaryOutputs
-        );
-
-        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Tmt_engineersdescent.MODID, "sawmill/" + recipeName);
-        sawingOutput.accept(id, recipe, null);
     }
 }

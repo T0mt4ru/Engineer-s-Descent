@@ -31,7 +31,19 @@ public class TmtClocheRecipes {
     private static final float chanceLow = 0.25f;
 
 
-
+    /**
+     *
+     * @param clocheOutput
+     * @param seedItem
+     * @param cropOutput
+     * @param cropYield
+     * @param cropSecondaries
+     * @param soilItem
+     * @param fluidIngredient
+     * @param time
+     * @param clocheRenderFunction
+     * @param recipeName
+     */
 
     private static void generateClocheRecipe(
             RecipeOutput clocheOutput, Ingredient seedItem, ResourceLocation cropOutput,int cropYield,

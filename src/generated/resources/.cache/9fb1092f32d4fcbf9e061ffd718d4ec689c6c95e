@@ -1,4 +1,6 @@
-// 1.21.1	2026-08-19T01:25:48.8024997	Recipes
+// 1.21.1	2026-08-19T21:40:29.9772439	Recipes
+9b32000708b05ac6bc424f38444b6eb5b6ac291e data/tmt_engineersdescent/advancement/recipes/misc/smelting/pendorite_dust.json
+f477a7484845c95a82692aadc8ae4228a337a4a5 data/tmt_engineersdescent/recipe/arcfurnace/pendorite.json
 e3857f814b4e616f51f385a187d0b2122846c73b data/tmt_engineersdescent/recipe/cloche/arisian_blossom.json
 748d85d7ea4e69d2b3fd3f5da593fbb54f8ffd95 data/tmt_engineersdescent/recipe/cloche/arisian_branch.json
 2f8827263d23b66dfa7329a70d91148b07a82db9 data/tmt_engineersdescent/recipe/cloche/arisian_dandelions.json
@@ -19,7 +21,7 @@ dd7bff2a8519cb46d648e9765fec8d604a0c312e data/tmt_engineersdescent/recipe/cloche
 d03903740f26c651d498c88108e9cda059fc59cb data/tmt_engineersdescent/recipe/cloche/wailing_bulb_blossom.json
 e3c0e06249e1db83df7f9782b745caeebf3fe3f9 data/tmt_engineersdescent/recipe/cloche/wailing_fungus.json
 9f4fe13c1a7979582272339af40706cdee1db866 data/tmt_engineersdescent/recipe/cloche/wailing_grass.json
-25bbe8e3c32885905934bebe0ff6e010dd5030eb data/tmt_engineersdescent/recipe/crusher/ores/pendorite.json
+25bbe8e3c32885905934bebe0ff6e010dd5030eb data/tmt_engineersdescent/recipe/crusher/pendorite.json
 2ca4f518be582dbcb0b95914f42e31204bc33d2b data/tmt_engineersdescent/recipe/sawmill/arisian_bookshelf.json
 67c354b38152a3e8655d171ebfdd9d473acdd57d data/tmt_engineersdescent/recipe/sawmill/arisian_door.json
 36e5f697ecc570f8fc2d65e55b8a19a0fe462a41 data/tmt_engineersdescent/recipe/sawmill/arisian_log.json
@@ -52,3 +54,4 @@ e0a03ac774255d81fb4aabb0685690b8813a29ac data/tmt_engineersdescent/recipe/sawmil
 d9e3f1be8273dabaa3607b42558870429aba90b6 data/tmt_engineersdescent/recipe/sawmill/wailing_planks.json
 d5aa0ace07e1675bb0e0281e6dad6baa4ff3c893 data/tmt_engineersdescent/recipe/sawmill/wailing_stairs.json
 e8f1a1333787ffafa24b662b4fc7375dc0e1d34c data/tmt_engineersdescent/recipe/sawmill/wailing_stem.json
+9d30dfd8fc1477b06bdccf8ae1ed4ed3996f52be data/tmt_engineersdescent/recipe/smelting/pendorite_dust.json
