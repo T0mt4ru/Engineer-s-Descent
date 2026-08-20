@@ -12,6 +12,9 @@ public class TmtModDataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
+
+        TmtModDataValidator.validate();
+
         var generator = event.getGenerator();
         var packOutput = generator.getPackOutput();
         var lookupProvider = event.getLookupProvider();
@@ -21,6 +24,7 @@ public class TmtModDataGenerators {
             protected void addTags(HolderLookup.Provider provider) {
 
             }
+
         };
 
         generator.addProvider(event.includeServer(), new TmtModRecipeProvider(packOutput, lookupProvider));

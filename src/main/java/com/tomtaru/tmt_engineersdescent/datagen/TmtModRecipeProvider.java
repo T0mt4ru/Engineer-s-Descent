@@ -29,6 +29,6 @@ public class TmtModRecipeProvider extends RecipeProvider {
         //ThermoelectricRecipes.build(output);
         //RefineryRecipes.build(output);
         //TmtCokeovenRecipes.build(output);
-        TmtArFurnaceRecipes.build(output);
+        TmtArcFurnaceRecipes.build(output);
     }
 }

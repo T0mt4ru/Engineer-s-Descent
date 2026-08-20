@@ -50,19 +50,32 @@ public class TmtCrusherRecipes {
 
         for (TmtModData.OrePedia oreType : TmtModData.OrePedia.OREPEDIA) {
 
-            TagOutput dustOutput = new TagOutput(new IngredientWithSize(oreType.getTag(oreType.dust()), 1));
+            TagOutput dustOutputRaw = new TagOutput(new IngredientWithSize(oreType.getTag(oreType.dust()), 1));
+            TagOutput dustOutputOre = new TagOutput(new IngredientWithSize(oreType.getTag(oreType.dust()), 2));
 
-            List<StackWithChance> secondaries = List.of(
+            List<StackWithChance> secondariesMedium = List.of(
                     new StackWithChance(new TagOutput(oreType.getTag(oreType.dust()), 1), chanceMedium)
+            );
+
+            List<StackWithChance> secondariesLow = List.of(
+                    new StackWithChance(new TagOutput(oreType.getTag(oreType.dust()), 1), chanceLow)
             );
 
             generateCrusherRecipe(output,
                     oreType.getIngredient(oreType.raw()),
-                    dustOutput,
+                    dustOutputRaw,
                     energyStone,
-                    secondaries,
-                    oreType.oreName()
+                    secondariesMedium,
+                    "raw_" + oreType.oreName()
             );
+
+            generateCrusherRecipe(output,
+                    oreType.getIngredient(oreType.oreBlock()),
+                    dustOutputOre,
+                    energyStone,
+                    secondariesLow,
+                    oreType.oreName() + "_ore"
+                    );
         }
     }
 }

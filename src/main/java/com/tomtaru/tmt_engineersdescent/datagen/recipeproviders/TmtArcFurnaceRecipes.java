@@ -8,7 +8,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.List;
 
-public class TmtArFurnaceRecipes {
+public class TmtArcFurnaceRecipes {
 
     /**
      *

@@ -1,0 +1,21 @@
+{
+  "type": "immersiveengineering:crusher",
+  "energy": 6000,
+  "input": {
+    "item": "netherdescent:pendorite_ore"
+  },
+  "result": {
+    "basePredicate": {
+      "tag": "c:dusts/pendorite"
+    },
+    "count": 2
+  },
+  "secondaries": [
+    {
+      "chance": 0.1,
+      "output": {
+        "tag": "c:dusts/pendorite"
+      }
+    }
+  ]
+}

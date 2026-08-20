@@ -271,7 +271,7 @@ public class TmtModData {
         }
 
         public ResourceLocation oreBlock() {
-            return ModPedia.C.id("ores/" + this.oreName);
+            return ModPedia.ND.id(this.oreName+ "_ore");
         }
 
         public ResourceLocation raw() {
